@@ -3,7 +3,7 @@ let characters = [];
 const charactersContainer = document.getElementById("characters-container");
 const searchInput = document.getElementById("search");
 
-// Traer personajes
+
 fetch("https://api.jikan.moe/v4/anime/1535/characters")
   .then(response => response.json())
   .then(data => {
@@ -11,7 +11,7 @@ fetch("https://api.jikan.moe/v4/anime/1535/characters")
     displayCharacters(characters);
   });
 
-// Mostrar personajes
+
 function displayCharacters(list) {
   charactersContainer.innerHTML = "";
 
@@ -26,7 +26,7 @@ function displayCharacters(list) {
   });
 }
 
-// Buscador
+
 searchInput.addEventListener("input", (e) => {
   const value = e.target.value.toLowerCase();
 
